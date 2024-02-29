@@ -1,5 +1,5 @@
 // index.js
-fetch('homepage1.txt')  // Fetch the content of paragraph.txt
+fetch('.text/homepage1.txt')  // Fetch the content of paragraph.txt
     .then(response => response.text())  // Convert the response to text
     .then(text => {  // Once the content is fetched
         const paragraphPlaceholder = document.getElementById('paragraphPlaceholder');
