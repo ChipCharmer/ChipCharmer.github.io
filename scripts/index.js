@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch('/scripts/text/homepage1.txt')  
+    fetch('/text/homepage1.txt')  
     .then(response => response.text())  
     .then(text => {  
         const paragraphPlaceholder = document.getElementById('paragraphPlaceholder');
