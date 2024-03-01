@@ -1,6 +1,6 @@
 body {
-    background-color: #80150f;
-    color: #f5f5f5;
+    background-color: #fff;
+    color: #212529;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -16,7 +16,7 @@ body {
 }
 
 .header {
-    background-color: #c41d14;
+    background-color: #ff5047;
     color: #fff;
     margin-bottom: 2rem;
     padding: 2rem 1rem;
