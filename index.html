@@ -4,97 +4,66 @@
     <head>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
         <link href="styles.css" rel="stylesheet">
+        <meta charset="utf-8">
         <title>Trivia!</title>
-        <script>
-            // Code to check answers to questions
-            document.addEventListener('DOMContentLoaded', function() {
-                // Part 1: Multiple Choice
-                let buttonIds = ["answer1", "answer2", "answer3", "answer4", "answer5"];
-                let previousButton = null;
-                let messagePart1 = document.getElementById('messagePart1');
-
-                buttonIds.forEach(id => {
-                    let button = document.getElementById(id);
-                    button.addEventListener("click", function(event) {
-                        event.preventDefault();
-
-                        // Reset previous button choice color
-                        if (previousButton) {
-                            previousButton.style.backgroundColor = ""; // Reset to default color
-                        }
-
-                        // Change button's color and display text based on the correctness of the answer
-                        if (this.id === "answer4") {
-                            this.style.backgroundColor = "green";
-                            messagePart1.textContent = "Correct!";
-                        } else {
-                            this.style.backgroundColor = "red";
-                            messagePart1.textContent = "Incorrect";
-                        }
-
-                        // Store current button choice
-                        previousButton = this;
-                    });
-                });
-
-                // Part 2: Free Response
-                let checkAnswerPart2 = document.getElementById("checkAnswerPart2");
-                let textfieldPart2 = document.getElementById("textfieldPart2");
-                let messagePart2 = document.getElementById("messagePart2");
-
-                // Check for answers when the button is clicked
-                checkAnswerPart2.addEventListener("click", function(event) {
-                    event.preventDefault();
-
-                    // If answer is cs50
-                    if (textfieldPart2.value.trim().toLowerCase() === 'cs50') {
-                        textfieldPart2.style.backgroundColor = 'green';
-                        messagePart2.textContent = 'Correct!';
-
-                    } else {
-                        textfieldPart2.style.backgroundColor = 'red';
-                        messagePart2.textContent = 'Incorrect';
-                    }
-                });
-            });
-        </script>
+        <script> src="/scripts/index.js"</script>
     </head>
     <body>
-        <div class="header">
-            <h1>Trivia!</h1>
-        </div>
-
-        <div class="container">
-            <div class="section">
-                <h2>Part 1: Multiple Choice </h2>
-                <hr>
-                <!-- Multiple choice question here -->
-                <h3>
-                    Where Was Gondor When the Westfold Fell?
-                </h3>
-                <form>
-                    <button id="answer1">Ordering second breakfast</button>
-                    <button id="answer2">In a meeting with the Eagles</button>
-                    <button id="answer3">Lost in the Mines of Moria</button>
-                    <button id="answer4">In Gondor</button>
-                    <button id="answer5">Eating Lembas Bread</button>
-                    <p id="messagePart1"></p>
-                </form>
-            </div>
-
-            <div class="section">
-                <h2>Part 2: Free Response</h2>
-                <hr>
-                <!-- Free response question here -->
-                <h3>
-                    Which Online Computer Science Introduction Course is the best accross the whole internet?
-                </h3>
-                <form>
-                    <input id="textfieldPart2" autocomplete="off">
-                    <button id="checkAnswerPart2">Check Answer</button>
-                    <p id="messagePart2"></p>
-                </form>
-            </div>
-        </div>
+       <main>
+      <h1>CatPhotoApp</h1>
+      <section>
+        <h2>Cat Photos</h2>
+        <!-- TODO: Add link to cat photos -->
+        <p>See more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a> in our gallery.</p>
+        <a href="https://freecatphotoapp.com"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+      </section>
+      <section>
+        <h2>Cat Lists</h2>
+        <h3>Things cats love:</h3>
+        <ul>
+          <li>cat nip</li>
+          <li>laser pointers</li>
+          <li>lasagna</li>
+        </ul>
+        <figure>
+          <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">
+          <figcaption>Cats <em>love</em> lasagna.</figcaption>  
+        </figure>
+        <h3>Top 3 things cats hate:</h3>
+        <ol>
+          <li>flea treatment</li>
+          <li>thunder</li>
+          <li>other cats</li>
+        </ol>
+        <figure>
+          <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field.">
+          <figcaption>Cats <strong>hate</strong> other cats.</figcaption>  
+        </figure>
+      </section>
+      <section>
+        <h2>Cat Form</h2>
+        <form action="https://freecatphotoapp.com/submit-cat-photo">
+          <fieldset>
+            <legend>Is your cat an indoor or outdoor cat?</legend>
+            <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
+            <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+          </fieldset>
+          <fieldset>
+            <legend>What's your cat's personality?</legend>
+            <input id="loving" type="checkbox" name="personality" value="loving" checked> <label for="loving">Loving</label>
+            <input id="lazy" type="checkbox" name="personality" value="lazy"> <label for="lazy">Lazy</label>
+            <input id="energetic" type="checkbox" name="personality" value="energetic"> <label for="energetic">Energetic</label>
+          </fieldset>
+          <input type="text" name="catphotourl" placeholder="cat photo URL" required>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>
+        No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a>
+      </p>
+    </footer>
+  </body>
     </body>
 </html>
