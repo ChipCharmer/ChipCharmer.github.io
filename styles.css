@@ -1,62 +1,235 @@
-body {
-    background-color: #fff;
-    color: #212529;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    margin: 0;
+/* CSS code adapted from W3Schools: https://www.w3schools.com/css/  */
+
+
+/*--------------------------------------------------------------
+Navigation Bar
+--------------------------------------------------------------*/               
+
+.topnav {
+    background-color: black;
+    font-size: 25px;
+    text-align: center;
+}
+
+ul {
+    margin: auto;
+	padding: 10px;
+}
+
+li {
+    display: inline;
+    color: white;
+    text-align: center;
+}
+
+nav li + li:before {
+    content: " · ";
+    padding: 10px;
+    color: lightgray;
+}
+
+.topnav a {
+    color: white;
+}
+.topnav a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.quicksand-nav {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 30px;
+}
+
+/*--------------------------------------------------------------
+Drop down menu (In Navigation Bar)
+--------------------------------------------------------------*/    
+
+.dropdown-menu {
+    background-color: black;
+    font-size: 25px;
+    text-align: center;
+    list-style-type: none;
+}
+
+nav .dropdown-menu li:before {
+    content: " ";
+    padding: 0%;
+}
+
+
+/*--------------------------------------------------------------
+Image Body (Following the Navigation Bar)
+--------------------------------------------------------------*/               
+#home_image {
+    position: relative;
+    background-image: url('https://get.pxhere.com/photo/technology-product-electronics-microcontroller-electronic-engineering-electronic-device-computer-hardware-personal-computer-hardware-display-device-electronics-accessory-electrical-network-138619.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-position: 0px -300px;
+    background-size: 100% 100%;
+    height: 330px;
+}
+
+#about_image {
+    position: relative;
+    background-image: url('https://www.kompulsa.com/wp-content/uploads/2016/07/Launchpad-MSP430-G2452.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-position: 0px -30px;
+    background-size: 100% 100%;
+    height: 330px;
+}
+
+#contact_image {
+    position: relative;
+    background-image: url('http://www.embarcados.com.br/wp-content/uploads/2015/11/edx-660x216.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-position: 0px -30px;
+    background-size: 100%;
+    height: 330px;
+}
+
+#portfolio_image {
+    position: relative;
+    background-image: url('https://www.kompulsa.com/wp-content/uploads/2016/07/Launchpad-MSP430-G2452.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-position: 0px -30px;
+    background-size: 100% 100%;
+    height: 330px;
+}
+
+#hello_project_image {
+    position: relative;
+    background-image: url('http://shiftedstuff.ru/wp-content/uploads/2020/01/helloworld-1536x1024.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-position: 0% 100%;
+    background-size: 100%;
+    height: 330px;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 42%;
+  right: 42%;
+  transform: translate(-50%, -50%);
+}
+
+.quicksand-imagedown {
+    font-family: 'Montserrat',sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 80px;
+    color: #000000;
+  }
+  
+
+/*--------------------------------------------------------------
+Content (Body)
+--------------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+h2 {
+    font-size: 25px;
+    margin-bottom: 2%;
+}
+  
+  
+p {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 24px;
     text-align: left;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 3%;
+  }
+
+p a {
+    color: rgb(2, 181, 181);
+}
+   
+p a:hover {
+   color: rgb(2, 181, 181);
 }
 
-.container {
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-}
 
-.header {
-    background-color: #477bff;
-    color: #fff;
-    margin-bottom: 2rem;
-    padding: 2rem 1rem;
+/*--------------------------------------------------------------
+Footer
+--------------------------------------------------------------*/
+
+footer {
+    background-color: black;
+    font-size: 25px;
     text-align: center;
+    padding: 10px;
+    color: white;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 
-.section {
-    padding: 0.5rem 2rem 1rem 2rem;
-}
-
-.section:hover {
-    background-color: #f5f5f5;
-    transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
-}
-
-h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 48px;
-}
-
-button, input[type="submit"] {
-    background-color: #d9edff;
-    border: 1px solid transparent;
-    border-radius: 0.25rem;
-    font-size: 0.95rem;
-    font-weight: 400;
-    line-height: 1.5;
-    padding: 0.375rem 0.75rem;
+footer p {
     text-align: center;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    vertical-align: middle;
+    margin: auto;
 }
 
-
-input[type="text"] {
-    line-height: 1.8;
-    width: 25%;
+footer a {
+    color: white;
 }
 
-input[type="text"]:hover {
-    background-color: #f5f5f5;
-    transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
+footer a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.quicksand-footer {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 30px;
 }
