@@ -1,0 +1,26 @@
+Lists of the HTML tags I've used
+
+    1. <!DOCTYPE html>
+    2. <meta>
+    3. <link>
+    4. <script>
+    5. <header>
+    6. <main>
+    7. <nav>
+    8. <ul>
+    9. <li>
+    10. <a>
+
+Lists of the CSS Properties I've used:
+
+    1. background-color
+    2. font-size
+    3. text-align
+    4. margin
+    5. display
+   
+
+Description of how I chose to use JavaScript and Bootstrap:
+
+"I made a dropdown menu in the navigation bar with Bootstrap" 
+"I made a popup window for an element in the dropdown menu which triggers using javascript"
