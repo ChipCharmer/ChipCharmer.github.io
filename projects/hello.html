@@ -10,7 +10,7 @@
         <!-- My stylesheet -->
         <link href="../styles.css" rel="stylesheet">
         <!-- My Script -->
-        <script src="main.js"></script>
+        <script src="../main.js"></script>
 
         <!-- Typography -->
         <!-- Quicksand -->
@@ -37,7 +37,8 @@
                     <a href="#" data-toggle="dropdown">Portfolio</a>
                     <ul class="dropdown-menu">
                         <li><a href="/projects/hello.html">Hello World</a></li>
-                        <li><a href="../portfolio.html">All Projects</a></li>
+                      <!-- trigger message explaining what happened to this webpage -->
+                      <li><a href="#" onclick="openPopup()">All Projects</a></li>
                     </ul>
                 </li>
 
@@ -48,7 +49,15 @@
           </header>
         <main>
           <!-- image down the navigation bar -->
-          <div id="hello_project_image"></div>
+          <div id="hello_project_image">
+              <!-- Show a message to the user since the portfolio is empty -->
+                <div id="empty-portfolio" class="popup">
+                    <div class="popup-content">
+                        <span onclick="closePopup()" style="float: right; cursor: pointer;">&times;</span>
+                        <p>No projects for now, sorry! I will try to upload some when i figure out this mess of website.</p>
+                    </div>
+                </div>
+          </div>
             <section>
                 <h1>Hello World</h1>
                 <p>Blinking a LED is pretty much the embedded systems version of the ubiquitous <a href="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program " target="_blank">Hello World program</a>, the development kits usually come with a few of them connected to the GPIOs</p>

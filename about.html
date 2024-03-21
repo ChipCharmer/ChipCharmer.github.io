@@ -38,7 +38,8 @@
                     <a href="#" data-toggle="dropdown">Portfolio</a>
                     <ul class="dropdown-menu">
                         <li><a href="/projects/hello.html">Hello World</a></li>
-                        <li><a href="portfolio.html">All Projects</a></li>
+                      <!-- trigger message explaining what happened to this webpage -->
+                      <li><a href="#" onclick="openPopup()">All Projects</a></li>
                     </ul>
                 </li>
 
@@ -49,7 +50,15 @@
           </header>
         <main>
           <!-- image down the navigation bar -->
-          <div id="about_image"></div>
+          <div id="about_image">
+              <!-- Show a message to the user since the portfolio is empty -->
+                <div id="empty-portfolio" class="popup">
+                    <div class="popup-content">
+                        <span onclick="closePopup()" style="float: right; cursor: pointer;">&times;</span>
+                        <p>No projects for now, sorry! I will try to upload some when i figure out this mess of website.</p>
+                    </div>
+                </div>
+          </div>
             <section>
                 <h1>About</h1>
                 <p>This is a personal website log for my journey learning embedded systems. Here you will find my portfolio, contact information, and more about me.</p>
